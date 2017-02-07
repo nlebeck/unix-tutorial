@@ -25,7 +25,7 @@ virtual machine. See
 <p>
 In this tutorial, you'll interact with Unix through a terminal. The terminal
 runs a program called a <i>shell</i> that accepts text commands from the user
-and prints text output. The default shell on Ubuntu and macOS is Bash. 
+and prints text output. The default shell on Ubuntu and macOS is called Bash. 
 </p>
 <p>
 Let's open a terminal window that we will use for the rest of the tutorial.
@@ -33,7 +33,7 @@ On Ubuntu, right-click on the desktop and select "Open Terminal." On macOS,
 open the Terminal app. A window will pop up displaying a line that looks like
 this: <code>myname@mycomputer:~$</code> with a blinking cursor at the end.
 </p>
-<h2>3. Your first command: ls</h2>
+<h2>3. Your first command: <i>ls</i></h2>
 <p>
 You interact with the terminal by running <i>commands</i>, programs that
 produce text output. You run a command by typing its name in the terminal and
@@ -80,7 +80,7 @@ of a file is its path relative to your current working directory. For instance,
 if your current working directory is <code>/tmp</code>, the relative path of
 the "output.txt" file mentioned above is <code>logs/output.txt</code>.
 </p>
-<h3>4.2 The pwd command</h3>
+<h3>4.2 Printing the working directory with <i>pwd</i></h3>
 <p>
 Which
 directory is our working directory right now? Let's use the
@@ -89,19 +89,61 @@ path to your current working directory ("Print Working Directory"). Type
 <code>pwd</code> and hit Enter, and you should see something like this:
 </p>
 <div class="codeblock">
-myname@mycomputer:$ pwd
+myname@mycomputer:~$ pwd
 <br>
 /home/myname
 </div>
 <h3>4.3 Home directories</h3>
 <p>
 This directory is your <i>home directory</i>. Your home directory holds
-configuration files and any other files you want to put inside it.  A
+configuration files and any other files you want to put inside it. A
 newly-opened terminal window starts with its working directory set to your home
-directory.  Although the absolute path to your home directory is something like
+directory. Although the absolute path to your home directory is something like
 <code>/home/myname</code>, when running commands in the terminal, you can refer
 to it with the shortcut symbol <code>~</code>. The terminal knows how to expand
 this symbol into your home directory's absolute path. 
+</p>
+<h3>4.4 Making a directory with <i>mkdir</i></h3>
+<p>
+The <code>mkdir</code> command allows you to create a new directory. Let's
+create a new directory called "tutorial" inside your home directory.  Enter the
+command <code>mkdir tutorial</code> to do so:
+</p>
+<div class="codeblock">
+myname@mycomputer:~$ mkdir tutorial
+<br>
+myname@mycomputer:~$
+</div>
+<p>
+You can't tell yet, but the "tutorial" directory was created. To see the new directory,
+use <code>ls</code>. You'll see something like this:
+</p>
+<div class="codeblock">
+myname@mycomputer:~$ ls
+<br>
+Desktop Documents Downloads Music Pictures Public Templates tutorial Videos
+</div>
+<p>
+The output of <code>ls</code> has changed to show the "tutorial" directory.
+</p>
+<h3>4.5 Changing the working directory with <i>cd</i></h3>
+<p>
+The <code>cd</code> command ("change directory") allows us to change the
+working directory by entering the path of a different directory.
+To change directories to the "tutorial" directory we just created,
+enter the command <code>cd tutorial</code>:
+</p>
+<div class="codeblock">
+myname@mycomputer:~$ cd tutorial
+<br>
+myname@mycomputer:~/tutorial$
+</div>
+<p>
+Note that the terminal prompt changed to reflect the new working directory.
+The <code>cd</code> command, like many commands, takes either an absolute or
+relative path. We used a relative path above, but we could have used an absolute
+path by entering <code>cd /home/myname/tutorial</code> (replacing <code>myname</code>
+with your user name).
 </p>
 </body>
 </html>
