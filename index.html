@@ -31,9 +31,9 @@ and prints text output. The default shell on Ubuntu and macOS is Bash.
 Let's open a terminal window that we will use for the rest of the tutorial.
 On Ubuntu, right-click on the desktop and select "Open Terminal." On macOS,
 open the Terminal app. A window will pop up displaying a line that looks like
-this: <code>user@machine:~$</code> with a blinking cursor at the end.
+this: <code>myname@mycomputer:~$</code> with a blinking cursor at the end.
 </p>
-<h3>3. Your first command: ls</h3>
+<h2>3. Your first command: ls</h2>
 <p>
 You interact with the terminal by running <i>commands</i>, programs that
 produce text output. You run a command by typing its name in the terminal and
@@ -42,17 +42,16 @@ directory. Type <code>ls</code> into the terminal and hit Enter. You'll see a
 list of file and directory names that looks something like this:
 </p>
 <div class="codeblock">
-user@machine:~$ ls
+myname@mycomputer:~$ ls
 <br>
 Desktop Documents Downloads Music Pictures Public Templates Videos
 </div>
 <p>
-You just ran your first command! Now let's learn more about files and
-commands.
+You just ran your first command!
 </p>
 <h2>4. More about files and directories</h2>
 <p>
-We'll start with looking at the files and directories on your computer. The
+We'll start with looking at the files on your computer. The
 Unix file system is a tree made of files and <i>directories</i>, special
 files that can hold other files. The <i>root directory</i> is the base of the
 tree. Whether you've used macOS or Windows in the past, you're probably used to
@@ -60,6 +59,7 @@ browsing a similar file system with a graphical interface. The main difference
 here is that we're going to interact with the file system through terminal
 commands.
 </p>
+<h3>4.1 File paths and the working directory</h3>
 <p>
 A <i>path</i> describes the location of a file. It consists of directories
 separated by forward slashes, where each subsequent directory
@@ -74,23 +74,34 @@ forward slash: <code>/</code>.
 <p>
 The terminal always has a <i>working directory</i>. You can think of it as the
 current directory that you're "inside" of: many commands will apply to the
-working directory by default. For instance, the <code>ls</code> command that we
-ran earlier shows the files in your working directory by default. Which
-directory was our working directory when we ran <code>ls</code>? A newly-opened
-terminal window starts with its working directory set to your <i>home
-directory</i>.  Your home directory holds configuration files, and on a Unix
-machine with many users, the home directory is where you would put your files.
-The absolute path to your home directory is something like
-<code>/home/myusername</code>, but you can refer to it with the shortcut symbol
-<code>~</code>. In many situations, the terminal knows how to expand this
-symbol into the absolute path of your home directory.
+working directory by default. For instance, the <code>ls</code> command
+shows the files in your working directory by default. The <i>relative path</i>
+of a file is its path relative to your current working directory. For instance,
+if your current working directory is <code>/tmp</code>, the relative path of
+the "output.txt" file mentioned above is <code>logs/output.txt</code>.
 </p>
+<h3>4.2 The pwd command</h3>
 <p>
-Just what is the absolute path to your home directory? Let's use the
+Which
+directory is our working directory right now? Let's use the
 <code>pwd</code> command to find out. The <code>pwd</code> command prints the
 path to your current working directory ("Print Working Directory"). Type
-<code>pwd</code> and hit Enter, and you should see the absolute path to your
-home directory.
+<code>pwd</code> and hit Enter, and you should see something like this:
+</p>
+<div class="codeblock">
+myname@mycomputer:$ pwd
+<br>
+/home/myname
+</div>
+<h3>4.3 Home directories</h3>
+<p>
+This directory is your <i>home directory</i>. Your home directory holds
+configuration files and any other files you want to put inside it.  A
+newly-opened terminal window starts with its working directory set to your home
+directory.  Although the absolute path to your home directory is something like
+<code>/home/myname</code>, when running commands in the terminal, you can refer
+to it with the shortcut symbol <code>~</code>. The terminal knows how to expand
+this symbol into your home directory's absolute path. 
 </p>
 </body>
 </html>
