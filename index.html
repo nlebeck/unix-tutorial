@@ -15,9 +15,80 @@ to more advanced sources for further reading.
 <h2>1. Prerequisites</h2>
 <p>
 All you need is a computer running a Unix operating system. If you have a Mac
-running macOS, you're good to go. If you have a Windows computer, don't fret!
-You can install Linux on a virtual machine. See
+running macOS, you're good to go: macOS is a Unix operating system under the
+hood. If you have a Windows computer, don't fret!  You can install Linux on a
+virtual machine. See
 <a href="linux-vm.html">here</a> for instructions.
+</p>
+<h2>2. The terminal</h2>
+<p>
+In this tutorial, you'll interact with Unix through a terminal. The terminal
+runs a program called a <i>shell</i> that accepts text commands from the user
+and prints text output. The default shell on Ubuntu and macOS is Bash. 
+</p>
+<p>
+Let's open a terminal window that we will use for the rest of the tutorial.
+On Ubuntu, right-click on the desktop and select "Open Terminal." On macOS,
+open the Terminal app. A window will pop up displaying a line that looks like
+this: <code>user@machine:~$</code> with a blinking cursor at the end.
+</p>
+<h3>3. Your first command: ls</h3>
+<p>
+You interact with the terminal by running <i>commands</i>, programs that
+produce text output. You run a command by typing its name in the terminal and
+pressing the Enter key. The <code>ls</code> command lists files in the current
+directory. Type <code>ls</code> into the terminal and hit Enter. You'll see a
+list of file and directory names that looks something like this:
+</p>
+<p>
+<code>Desktop Downloads Music Public Videos</code>
+<br>
+<code>Documents Pictures Templates</code>
+</p>
+<p>
+You just ran your first command! Now let's learn more about files and
+commands.
+</p>
+<h2>4. More about files and directories</h2>
+<p>
+We'll start with looking at the files and directories on your computer. The
+Unix file system is a tree made of files and <i>directories</i>, special
+files that can hold other files. The <i>root directory</i> is the base of the
+tree. Whether you've used macOS or Windows in the past, you're probably used to
+browsing a similar file system with a graphical interface. The main difference
+here is that we're going to interact with the file system through terminal
+commands.
+</p>
+<p>
+A <i>path</i> describes the location of a file. It consists of directories
+separated by forward slashes, where each subsequent directory
+is inside the previous directory, and ends in a file. An <i>absolute path</i>
+gives the location of the file starting from the root directory.
+For example, the path
+<code>/tmp/logs/output.txt</code> gives the location of a file called "output.txt",
+which is inside the directory "logs," which is inside the directory "tmp," which is
+inside the root directory. The absolute path to the root directory is simply the
+forward slash: <code>/</code>.
+</p>
+<p>
+The terminal always has a <i>working directory</i>. You can think of it as the
+current directory that you're "inside:" many commands will apply to the working
+directory by default. For instance, the <code>ls</code> command that we ran
+earlier shows the files in your working directory by default. Which directory
+was our working directory when we ran <code>ls</code>? A newly-opened terminal
+window starts with its working directory set to your <i>home directory</i>.
+Your home directory holds configuration files, and on a Unix machine with
+many users, the home directory is where you would put your files. The absolute
+path to your home directory is something like <code>/home/myusername</code>,
+but you can refer to it with the shortcut symbol <code>~</code>. In many
+situations, the terminal knows how to expand this symbol into the absolute
+path of your home directory.
+</p>
+<p>
+Just what is the absolute path to your home directory? Let's use the <code>pwd</code>
+command to find out. The <code>pwd</code> command prints the path to your current
+working directory ("Print Working Directory"). Type <code>pwd</code> and hit Enter,
+and you should see the absolute path to your home directory.
 </p>
 </body>
 </html>
