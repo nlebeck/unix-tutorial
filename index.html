@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <title>Getting Started with Unix</title>
 </head>
 <body>
+<h1>Getting Started with Unix</h1>
 <p>
 This tutorial will teach you how to perform basic tasks with the Unix command
 line, including reading and editing files, browsing directories, searching for
@@ -12,68 +12,12 @@ files, and accessing remote machines. The goal of this tutorial is to teach
 a basic set of skills without overwhelming the reader, and to provide pointers
 to more advanced sources for further reading.
 </p>
-<h1>Prerequisites</h1>
+<h2>1. Prerequisites</h2>
 <p>
 All you need is a computer running a Unix operating system. If you have a Mac
 running macOS, you're good to go. If you have a Windows computer, don't fret!
-You can install Linux on a virtual machine.
-</p>
-<h2>Installing Linux on a virtual machine</h2>
-<p>
-A virtual machine (or VM) is an operating system running on top of another one
-(the actual definition is more nuanced, but this definition works fine for our
-purposes). A program called the <i>hypervisor</i> tricks the virtual machine
-into thinking it's running directly on top of the hardware like a normal
-operating system. We'll use Oracle's VirtualBox program as a hypervisor to run
-Linux (feel free to use a different hypervisor, like VMWare Player or Hyper-V,
-if you already have experience with one).
-</p>
-<p>
-Linux comes in multiple different <i>distributions</i>. Each distribution
-takes the base Linux operating system and adds tools and software to it.
-We'll use the Ubuntu distribution. Most of this tutorial applies to any
-distribution, but in situations where distributions differ, we'll provide
-details for Ubuntu.
-</p>
-<p>
-Download and install the most recent version of VirtualBox from the
-<a href=https://www.virtualbox.org>VirtualBox website</a>.
-Then download the recommended desktop version of Ubuntu from the
-<a href=https://www.ubuntu.com/download/desktop>Ubuntu website</a>.
-The download will be a disk image (an ISO file). Start up VirtualBox, and click
-the "New" button to create a new virtual machine. Name your virtual machine,
-set its type to "Linux," and set the version to "Ubuntu (64-bit)." On the next
-screen, leave the default RAM allocation. On the screen after that, choose to
-create a virtual hard disk. When creating the virtual hard disk, use the default
-settings for file type (VDI) and storage (dynamically allocated), and set its
-size to 16GB (the default size of 8GB will fill up pretty quickly).
-</p>
-<p>
-Now start up your virtual machine. When it asks for a startup disk, select the
-Ubuntu ISO file you downloaded earlier. Now you'll proceed through the Ubuntu
-installation process, just like you were installing Ubuntu directly onto your
-computer. The first set of options (whether to download updates during
-installation and whether to install third-party software) come down to personal
-preference -- for this tutorial, we won't be using any of that third-party
-software, so there's no need to install it. For installation type, select
-"Erase disk and install Ubuntu" (you're installing Ubuntu onto a virtual hard
-disk, so it won't actually erase anything). Click "Continue" when
-it asks you to confirm the changes to the disk. The rest of the installation
-process consists of typical things like choosing your time zone and keyboard
-layout and picking an account name and password. At the end of the installer,
-you'll be asked to restart the virtual machine.
-</p>
-<p>
-The installer is finished, but we're not quite done! We just have to install
-a set of "guest additions" that VirtualBox provides to make the guest operating
-system (that is, Ubuntu) run more smoothly as a virtual machine. Start up
-your virtual machine and log in. In the "Devices" menu at the top of your
-VM window, select "Insert Guest Additions CD Image..." (VirtualBox installs
-these guest additions by pretending to insert a CD into the virtual machine).
-A window will pop up asking for your approval to run a script and then your
-password, followed by a terminal window as the installer runs. Once the
-terminal window closes, the installer is finished. You're ready to use your
-Ubuntu virtual machine!
+You can install Linux on a virtual machine. See
+<a href="linux-vm.html">here</a> for instructions.
 </p>
 </body>
 </html>
