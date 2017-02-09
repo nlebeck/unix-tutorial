@@ -38,8 +38,8 @@ this: <code>myname@mycomputer:~$</code> with a blinking cursor at the end.
 You interact with the terminal by running <i>commands</i>, programs that
 produce text output. You run a command by typing its name in the terminal and
 pressing the Enter key. The <code>ls</code> command lists files in the current
-directory. Type <code>ls</code> into the terminal and hit Enter. You'll see a
-list of file and directory names that looks something like this:
+working directory. Type <code>ls</code> into the terminal and hit Enter. You'll
+see a list of file and directory names that looks something like this:
 </p>
 <div class="codeblock">
 myname@mycomputer:~$ ls
@@ -98,10 +98,7 @@ myname@mycomputer:~$ pwd
 This directory is your <i>home directory</i>. Your home directory holds
 configuration files and any other files you want to put inside it. A
 newly-opened terminal window starts with its working directory set to your home
-directory. Although the absolute path to your home directory is something like
-<code>/home/myname</code>, when running commands in the terminal, you can refer
-to it with the shortcut symbol <code>~</code>. The terminal knows how to expand
-this symbol into your home directory's absolute path. 
+directory.
 </p>
 <h3>4.4 Making a directory with <i>mkdir</i></h3>
 <p>
@@ -146,6 +143,61 @@ The <code>cd</code> command, like many commands, takes either an absolute or
 relative path. We used a relative path above, but we could have used an absolute
 path by entering <code>cd /home/myname/tutorial</code> (replacing <code>myname</code>
 with your user name).
+</p>
+<p>
+<h3>4.6 Directory shortcuts</h3>
+There are a few shortcuts that make life easier when typing out file paths.
+The first two are shortcuts that are provided by the file system itself.  Each
+directory contains a special directory called <code>.</code> (that's right, a single period) referring to
+itself and another special directory called <code>..</code> referring to its
+parent.  Using the second shortcut, we can use <code>cd</code> to move from the
+"tutorial" directory back to our home directory, its parent:
+</p>
+<div class="codeblock">
+myname@mycomputer:~/tutorial$ cd ..
+<br>
+myname@mycomputer:~$
+</div>
+<p>
+These shortcuts can appear anywhere inside of a path and are applied relative
+to the directory named by the path so far. For instance, we can change directories to
+the "tutorial" directory using a longer and more silly route:
+</p>
+<div class="codeblock">
+myname@mycomputer:~$ cd tutorial/../tutorial
+<br>
+myname@mycomputer:~/tutorial$
+</div>
+<p>
+For a more useful example of using this shortcut inside of a longer path, let's say
+we now want to change directories to the "Music" directory
+inside our home directory. We could do so with the following command:
+</p>
+<div class="codeblock">
+myname@mycomputer:~/tutorial$ cd ../Music
+<br>
+myname@mycomputer:~/Music$
+</div>
+<p>
+Because the two shortcuts we just learned are provided by the file system, you
+aren't limited to using them in the terminal. You can use them anywhere you
+would use a file path -- for instance, when opening a file inside of a program.
+The shortcut we're about to learn now is a little different in that it's
+handled by the shell, so you can only use it when you're typing file paths
+on the command line. If you place <code>~</code> (a tilde) at the beginning
+of a path, it refers to your home directory. We can change directories to the
+"tutorial" directory yet again using this shortcut:
+</p>
+<div class="codeblock">
+myname@mycomputer:~/Music$ cd ~/tutorial
+<br>
+myname@mycomputer:~/tutorial$
+</div>
+<p>
+Over time, using <code>..</code> to refer to the parent of a directory and
+using <code>~</code> to refer to your home directory will become second nature.
+The uses of the <code>.</code> shortcut are not quite as obvious, but we'll
+see some later.
 </p>
 </body>
 </html>
