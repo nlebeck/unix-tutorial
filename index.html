@@ -199,5 +199,47 @@ using <code>~</code> to refer to your home directory will become second nature.
 The uses of the <code>.</code> shortcut are not quite as obvious, but we'll
 see some later.
 </p>
+<h2>5. More about commands</h2>
+In this section, we'll learn more about commands, including arguments, streams,
+redirection, and pipes.
+<h3>5.1 Arguments</h3>
+<p>
+Some commands, like <code>ls</code>, run if you just type the command name
+and hit enter. Other commands, like <code>mkdir</code>, require you to
+type additional information after the command in the form of <i>arguments</i>:
+strings separated by spaces. Arguments can be used to control how commands
+execute, to tell commands what data to run on, and more. Some arguments,
+like the directory name for <code>mkdir</code>, are mandatory. Other arguments
+are optional; these arguments are commonly called command-line options. They
+are usually fixed strings that begin with a single dash if they are a single
+letter (e.g., <code>-l</code>) or with a double dash if they are a longer word
+(<code>--length</code>). Often a full-word option will be paired with a
+single-letter option that acts as a shortcut (for instance, <code>-l</code> and
+<code>--length</code> might do the same thing). Sometimes these optional
+arguments require other arguments immediately after that specify more
+information about how to apply the option (e.g., <code>--length 10</code>).
+</p>
+<p>
+Let's run <code>ls</code> with the <code>-a</code> (or <code>--all</code>)
+argument. This argument tells <code>ls</code> to print out hidden files, 
+files whose names begin with a period. Try running <code>ls</code> both with
+and without the <code>-a</code> option:
+</p>
+<div class="codeblock">
+myname@mycomputer:~/tutorial$ ls -a
+<br>
+. ..
+<br>
+myname@mycomputer:~/tutorial$ ls
+<br>
+myname@mycomputer:~/tutorial$
+</div>
+<p>
+When we use the <code>-a</code> option, we see the two special shortcut
+directories.
+</p>
+<h3>5.2 Using <i>man</i> to learn about commands</h3>
+<p>
+</p>
 </body>
 </html>
